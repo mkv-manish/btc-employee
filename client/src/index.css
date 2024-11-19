@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary: #1e293b;
+    --accent: #f97316;
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --card: #1e293b;
+    --card-hover: #334155;
+    --muted: #64748b;
+    --border: #334155;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+/* Utility Classes */
+/* @layer { */
+.flex-center {
+    @apply flex items-center justify-center;
+}
+
+.container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Button Styles */
+.btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-medium px-4 py-2 rounded-lg 
+         transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+    @apply bg-secondary hover:bg-card-hover text-white font-medium px-4 py-2 rounded-lg 
+         transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* Form Styles */
+.form-input {
+    @apply w-full bg-secondary border border-border rounded-lg px-4 py-2 text-foreground
+         focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-muted mb-1;
+}
+
+/* Card Styles */
+.card {
+    @apply bg-card rounded-lg border border-border p-6 shadow-lg;
+}
+/* } */
